@@ -28,7 +28,8 @@
     "prepublish": "npm run --if-present build"
   },
   "keywords": [
-    "gitbook"
+    "gitbook",
+    "plguin"
   ],
   "engines": {
     "gitbook": "*"
