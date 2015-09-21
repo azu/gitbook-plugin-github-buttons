@@ -14,6 +14,9 @@ Plugin Config
 
 ```json
 {
+  "plugins": [
+    "github-buttons"
+  ],
   "pluginsConfig": {
     "github-buttons": {
       "repo": "azu/JavaScript-Plugin-Architecture",
