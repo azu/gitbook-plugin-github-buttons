@@ -27,6 +27,10 @@ Plugin Config
 ```
 
 
+## Example
+
+- [azu/JavaScript-Plugin-Architecture](https://github.com/azu/JavaScript-Plugin-Architecture "azu/JavaScript-Plugin-Architecture")
+
 ## Contributing
 
 1. Fork it!
