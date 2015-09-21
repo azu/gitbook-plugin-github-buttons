@@ -14,6 +14,11 @@
   "version": "1.0.1",
   "description": "Gitbook plugin provide GitHub Button.",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "lib",
+    "src"
+  ],
   "directories": {
     "test": "test"
   },
