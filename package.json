@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/azu/gitbook-plugin-github-buttons/issues"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gitbook plugin provide GitHub Button.",
   "main": "index.js",
   "directories": {
@@ -20,7 +20,7 @@
   "scripts": {
     "build": "babel src --out-dir lib --source-maps",
     "watch": "babel src --out-dir lib --watch --source-maps",
-    "prepublish":"npm run --if-present build"
+    "prepublish": "npm run --if-present build"
   },
   "keywords": [
     "gitbook"
