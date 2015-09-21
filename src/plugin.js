@@ -57,17 +57,12 @@ require(['gitbook'], function (gitbook) {
         });
     }
 
-    /**
-     * repo
-     * types
-     * size
-     * count
-     */
-    gitbook.events.bind('start', function (e, config) {
-        init(config);
-    });
+    // injected by html hook
+    function getPluginConfig() {
+        return window["gitbook-plugin-github-buttons"];
+    }
 
-    gitbook.events.bind('page.change', function (e, config) {
-        init(config);
+    gitbook.events.bind('page.change', function () {
+        init(getPluginConfig());
     });
 });
