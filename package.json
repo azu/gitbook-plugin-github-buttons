@@ -1,0 +1,35 @@
+{
+  "name": "gitbook-plugin-github-buttons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azu/gitbook-plugin-github-buttons.git"
+  },
+  "author": "azu",
+  "email": "azuciao@gmail.com",
+  "homepage": "https://github.com/azu/gitbook-plugin-github-buttons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/gitbook-plugin-github-buttons/issues"
+  },
+  "version": "1.0.0",
+  "description": "Gitbook plugin provide GitHub Button.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib --source-maps",
+    "watch": "babel src --out-dir lib --watch --source-maps",
+    "prepublish":"npm run --if-present build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gitbook"
+  ],
+  "engines": {
+    "gitbook": ">2.x.x"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23"
+  }
+}
