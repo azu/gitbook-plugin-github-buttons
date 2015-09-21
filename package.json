@@ -20,8 +20,7 @@
   "scripts": {
     "build": "babel src --out-dir lib --source-maps",
     "watch": "babel src --out-dir lib --watch --source-maps",
-    "prepublish":"npm run --if-present build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish":"npm run --if-present build"
   },
   "keywords": [
     "gitbook"
