@@ -2,17 +2,30 @@
 
 Gitbook plugin that provide [The Unofficial GitHub Watch & Fork Buttons](https://ghbtns.com/ "The Unofficial GitHub Watch &amp; Fork Buttons").
 
+![screenshot](https://monosnap.com/file/pzLUbsaOvgah0aWPt6E0TqG0l73faX.png)
+
 ## Installation
 
-- [ ] Describe the installation process
+    npm install gitbook-plugin-github-buttons
 
 ## Usage
 
-- [ ] Write usage instructions
+Plugin Config
 
-## Tests
+```json
+{
+  "pluginsConfig": {
+    "github-buttons": {
+      "repo": "azu/JavaScript-Plugin-Architecture",
+      "types": [
+        "star",
+        "watch"
+      ]
+    }
+  }
+}
+```
 
-- [ ] Write How to Tests
 
 ## Contributing
 
