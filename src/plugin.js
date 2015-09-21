@@ -39,15 +39,15 @@ require(['gitbook'], function (gitbook) {
     }
 
     function init(config) {
-        var repoPath = config.github.repo;
+        var repoPath = config.repo;
         var [user, repo] = repoPath.split("/");
         if (repoPath == null) {
             console.log("Should set github.repo");
             return;
         }
-        var types = config.github.types || ["star", "watch"];
-        var size = config.github.size || "large";
-        var count = typeof config.github.count === "undefined" ? "true" : "false";
+        var types = config.types || ["star", "watch"];
+        var size = config.size || "large";
+        var count = typeof config.count === "undefined" ? "true" : "false";
         insertGitHubLink({
             user,
             repo,
