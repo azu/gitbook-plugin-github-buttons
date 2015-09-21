@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/azu/gitbook-plugin-github-buttons/issues"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Gitbook plugin provide GitHub Button.",
   "main": "index.js",
   "files": [
