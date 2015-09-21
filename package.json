@@ -31,7 +31,7 @@
     "gitbook"
   ],
   "engines": {
-    "gitbook": ">2.x.x"
+    "gitbook": "*"
   },
   "devDependencies": {
     "babel": "^5.8.23"
