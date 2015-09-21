@@ -38,7 +38,7 @@ require(['gitbook'], function (gitbook) {
         });
     }
 
-    gitbook.events.bind('start', function (e, config) {
+    function init(config) {
         var repoPath = config.github.repo;
         var [user, repo] = repoPath.split("/");
         if (repoPath == null) {
@@ -55,9 +55,19 @@ require(['gitbook'], function (gitbook) {
             size,
             count
         });
+    }
+
+    /**
+     * repo
+     * types
+     * size
+     * count
+     */
+    gitbook.events.bind('start', function (e, config) {
+        init(config);
     });
 
-    gitbook.events.bind('page.change', function () {
-        insertGitHubLink();
+    gitbook.events.bind('page.change', function (e, config) {
+        init(config);
     });
 });
