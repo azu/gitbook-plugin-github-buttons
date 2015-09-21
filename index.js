@@ -1,15 +1,16 @@
 module.exports = {
     book: {
-        assets: './assets',
+        assets: './lib',
         js: [
             'plugin.js'
         ],
         html: {
             "head:end": function () {
                 // window["gitbook-plugin-github-buttons"]
+                var configs = JSON.stringify(this.options.pluginsConfig["github-buttons"]);
                 return '<script>' +
-                    'window["gitbook-plugin-github-buttons"] = ' + JSON.stringify(this.options.pluginsConfig["github-buttons"]) +
-                    '</script>';
+                    'window["gitbook-plugin-github-buttons"] = ' + configs + ';'
+                    + '</script>';
             }
         }
     }
