@@ -1,0 +1,8 @@
+{% extends template.self %}
+
+{% block head %}
+    {{ super() }}
+    <script>
+        window["gitbook-plugin-github-buttons"] = {{ config.pluginsConfig['github-buttons']|dump|safe }};
+    </script>
+{% endblock %}
