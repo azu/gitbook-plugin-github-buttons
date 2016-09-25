@@ -29,7 +29,7 @@
   },
   "keywords": [
     "gitbook",
-    "plguin"
+    "plugin"
   ],
   "engines": {
     "gitbook": "*"
