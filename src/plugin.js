@@ -15,7 +15,7 @@ require(['gitbook'], function (gitbook) {
         var width = size === "large" ? "170" : "160";
         var height = size === "large" ? "30" : "20";
         var extraParam = type === "watch" ? "&v=2" : "";
-        return `<a class="btn pull-right" aria-label="github">
+        return `<a class="btn pull-right hidden-mobile" aria-label="github">
         <iframe style="display:inline-block;vertical-align:middle;" src="https://ghbtns.com/github-btn.html?user=${user}&repo=${repo}&type=${type}&count=${count}&size=${size}${extraParam}" frameborder="0" scrolling="0" width="${width}px" height="${height}px"></iframe>
         </a>`;
     }
