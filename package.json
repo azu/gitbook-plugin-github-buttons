@@ -15,6 +15,7 @@
   "description": "Gitbook plugin provide GitHub Button.",
   "main": "index.js",
   "files": [
+    "_layouts",
     "index.js",
     "lib",
     "src"
