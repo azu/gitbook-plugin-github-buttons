@@ -23,12 +23,20 @@ Plugin Config
       "types": [
         "star",
         "watch"
-      ]
+      ],
+      "size": "large"
     }
   }
 }
 ```
 
+The default size of `large` is `150 x 30`, and `small` is `100 x 20`, however, you can specify the size you want by using `width` and `height`. Such as:
+
+```json
+      "size": "small"
+      "width": 90,
+      "height": 21
+```
 
 ## Example
 
