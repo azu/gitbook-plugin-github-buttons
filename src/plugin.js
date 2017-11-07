@@ -16,21 +16,61 @@ require(['gitbook'], function (gitbook) {
         }) {
         var extraParam = type === "watch" ? "&v=2" : "";
         return `<a class="btn pull-right hidden-mobile" aria-label="github">
-        <iframe style="display:inline-block;vertical-align:middle;" src="https://ghbtns.com/github-btn.html?user=${user}&repo=${repo}&type=${type}&count=${count}&size=${size}${extraParam}" frameborder="0" scrolling="0" width="${width}px" height="${height}px"></iframe>
+            <iframe
+                style="display:inline-block;vertical-align:middle;"
+                src="https://ghbtns.com/github-btn.html?user=${user}&repo=${repo}&type=${type}&count=${count}&size=${size}${extraParam}"
+                frameborder="0"
+                scrolling="0"
+                width="${width}px"
+                height="${height}px"
+            ></iframe>
         </a>`;
     }
 
-
-    function insertGitHubLink({
+    function createUserButton({
         user,
-        repo,
-        types,
         size,
         width,
         height,
         count
         }) {
-        types.reverse().forEach(type => {
+        return `<a class="btn pull-right hidden-mobile" aria-label="github">
+            <iframe
+                style="display:inline-block;vertical-align:middle;"
+                src="https://ghbtns.com/github-btn.html?user=${user}&type=follow&count=${count}&size=${size}"
+                frameborder="0"
+                scrolling="0"
+                width="${width}px"
+                height="${height}px"
+            ></iframe>
+        </a>`;
+    }
+
+    function insertGitHubLink(button) {
+        var {
+            user,
+            repo,
+            type,
+            size,
+            width,
+            height,
+            count
+        } = button;
+
+        var size = size || "large";
+        var width = width || (size === "large" ? "150" : "100");
+        var height = height || (size === "large" ? "30" : "20");
+        var count = typeof count === "boolean" ? count : false;
+
+        if (type === 'follow') {
+            var elementString = createUserButton({
+                user,
+                size,
+                width,
+                height,
+                count                
+            });
+        } else {
             var elementString = createButton({
                 user,
                 repo,
@@ -40,31 +80,12 @@ require(['gitbook'], function (gitbook) {
                 height,
                 count
             });
-            addBeforeHeader(elementString);
-        });
+        }
+        addBeforeHeader(elementString);
     }
 
     function init(config) {
-        var repoPath = config.repo;
-        var [user, repo] = repoPath.split("/");
-        if (repoPath == null) {
-            console.log("Should set github.repo");
-            return;
-        }
-        var types = config.types || ["star", "watch"];
-        var size = config.size || "large";
-        var width = config.width || (size === "large" ? "150" : "100");
-        var height = config.height || (size === "large" ? "30" : "20");
-        var count = typeof config.count === "undefined" ? "true" : "false";
-        insertGitHubLink({
-            user,
-            repo,
-            types,
-            size,
-            width,
-            height,
-            count
-        });
+        config.buttons.forEach(insertGitHubLink);
     }
 
     // injected by html hook
