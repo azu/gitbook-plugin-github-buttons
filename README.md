@@ -19,12 +19,17 @@ Plugin Config
   ],
   "pluginsConfig": {
     "github-buttons": {
-      "repo": "azu/JavaScript-Plugin-Architecture",
-      "types": [
-        "star",
-        "watch"
-      ],
-      "size": "large"
+      "buttons": [{
+        "user": "azu",
+        "repo": "JavaScript-Plugin-Architecture",
+        "type": "star",
+        "size": "large"
+      }, {
+        "user": "azu",
+        "type": "follow",
+        "width": "230",
+        "count": false
+      }]
     }
   }
 }
